@@ -1,18 +1,7 @@
-function FizzBuzz() {
-  this.play = function(number) {
-    if (number % 15 == 0) {
-      return 'FizzBuzz';
-    } else if (number % 3 == 0) {
-      return 'Fizz';
-    } else if (number % 5 == 0) {
-      return 'Buzz';
-    } else {
-      return number;
-    }
-  }
+function Airport(){
+  this.capacity = []
 }
-
-var fizzBuzz = new FizzBuzz();
-for (var i = 1; i <= 100; i++) {
-  console.log(fizzBuzz.play(i));
+Airport.prototype.land = function(plane) {
+  this.capacity.push(plane);
+  return true;
 }

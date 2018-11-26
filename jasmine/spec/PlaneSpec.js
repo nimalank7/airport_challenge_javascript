@@ -1,29 +1,16 @@
-describe ("Fizzbuzz", function() {
-  var fizzbuzz;
+describe ("Plane", function() {
+  var plane;
   beforeEach(function(){
-    fizzbuzz = new FizzBuzz();
+    plane = new Plane();
   });
-  describe('multiples of 3', function (){
-    it('fizzes for 3', function() {
-      expect(fizzbuzz.play(3)).toEqual('Fizz');
+  describe('sets up an instance of the plane prototype', function (){
+    it('responds true', function() {
+      expect(Plane.prototype.isPrototypeOf(plane)).toBe(true);
     });
   });
-
-  describe('multiples of 5', function() {
-    it('buzzes for 5', function() {
-      expect(fizzbuzz.play(5)).toEqual('Buzz');
-    });
-  });
-
-  describe('multiples of 15', function() {
-    it('fizzbuzzes for 15', function() {
-      expect(fizzbuzz.play(15)).toEqual('FizzBuzz');
-    });
-  });
-
-  describe('returns number if not divisible by 3 or 5', function() {
-    it('returns number', function() {
-      expect(fizzbuzz.play(7)).toEqual(7);
+  describe('initializes plane status to land', function (){
+    it('returns landed if landed', function() {
+      expect(plane.status).toEqual("landed");
     });
   });
 });

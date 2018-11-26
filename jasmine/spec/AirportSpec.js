@@ -1,29 +1,17 @@
-describe ("Fizzbuzz", function() {
-  var fizzbuzz;
+describe ("Airport", function() {
+  var airport;
   beforeEach(function(){
-    fizzbuzz = new FizzBuzz();
+    airport = new Airport();
   });
-  describe('multiples of 3', function (){
-    it('fizzes for 3', function() {
-      expect(fizzbuzz.play(3)).toEqual('Fizz');
+  describe('sets up capacity to empty array', function (){
+    it('responds true', function() {
+      expect(airport.capacity).toEqual([]);
     });
   });
-
-  describe('multiples of 5', function() {
-    it('buzzes for 5', function() {
-      expect(fizzbuzz.play(5)).toEqual('Buzz');
-    });
-  });
-
-  describe('multiples of 15', function() {
-    it('fizzbuzzes for 15', function() {
-      expect(fizzbuzz.play(15)).toEqual('FizzBuzz');
-    });
-  });
-
-  describe('returns number if not divisible by 3 or 5', function() {
-    it('returns number', function() {
-      expect(fizzbuzz.play(7)).toEqual(7);
+  describe('lands plane and stores in capacity array', function (){
+    it('responds true', function() {
+      airport.land("Plane");
+      expect(airport.capacity.includes("Plane")).toBe(true);
     });
   });
 });
